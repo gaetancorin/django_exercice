@@ -17,3 +17,5 @@
 [CMD]- git clone https://github.com/gaetancorin/django_exercice.git
 
 [CMD]- sudo python3 django_exercice/monsite/manage.py runserver 0.0.0.0:8000
+
+Go to http://192.168.56.12:8000/sondage/ (need 30s to download all sniff, just wait)
