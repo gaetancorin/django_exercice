@@ -13,10 +13,10 @@ from scapy.config import conf
 from django.template import loader
 
 def index(request):
-    # listProtos=[layer.__name__ for layer in conf.layers]
+    listProtos=[layer.__name__ for layer in conf.layers]
     p = sniff(1, filter = "ip", iface="enp0s8")
     # context = {'allProtos': listProtos}
-    context = {'packet': p[0][IP]}
+    context = {'packet': p[0][IP], 'allProtos': listProtos}
     return render(request, 'sondage/index.html', context)
 
 def my_login(request):
