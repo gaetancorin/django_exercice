@@ -17,9 +17,9 @@
     <a href="{% url 'sondage:logout' %}">déconnexion</a>
     <a href="{% url 'sondage:profil' %}">profil</a>
 {% endif %}
-<!-- {% for proto in allProtos %}
+{% for proto in allProtos %}
 <p>{{ proto }}</p>
-{% endfor %} -->
+{% endfor %}
 <p>{{ packet.src }}</p>
 {% endblock %}
 </body>
