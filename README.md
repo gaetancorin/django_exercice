@@ -6,4 +6,6 @@
 [CMD]- sudo apt install python3-pip
 [CMD]- pip3 install Django
 [CMD]- sudo apt install git
+[CMD]- pip3 install scapy
 [CMD]- git clone https://github.com/gaetancorin/django_exercice.git
+[CMD]- sudo python3 django_exercice/monsite/manage.py runserver 0.0.0.0:8000

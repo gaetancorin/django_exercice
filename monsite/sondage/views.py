@@ -14,7 +14,7 @@ from django.template import loader
 
 def index(request):
     # listProtos=[layer.__name__ for layer in conf.layers]
-    p = sniff(10, filter = "ip", iface="enp0s8")
+    p = sniff(1, filter = "ip", iface="enp0s8")
     # context = {'allProtos': listProtos}
     context = {'packet': p[0][IP]}
     return render(request, 'sondage/index.html', context)
