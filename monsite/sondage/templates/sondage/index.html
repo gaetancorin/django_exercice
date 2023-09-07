@@ -17,10 +17,12 @@
     <a href="{% url 'sondage:logout' %}">déconnexion</a>
     <a href="{% url 'sondage:profil' %}">profil</a>
 {% endif %}
+<p>*************************** IP SNIFFER *********************************</p>
+<p>{{ packet.src }}</p>
+<p>*************************** ALL PROTOS ***********************************</p>
 {% for proto in allProtos %}
 <p>{{ proto }}</p>
 {% endfor %}
-<p>{{ packet.src }}</p>
 {% endblock %}
 </body>
 </html>
