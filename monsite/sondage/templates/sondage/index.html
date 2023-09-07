@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'sondage/style.css' %}">
+</head>
+<body>
+{% block contenue %}
+{% if not request.user.is_authenticated %}
+    <a href="{% url 'sondage:login' %}">connexion</a>
+    <a href="{% url 'sondage:register' %}">inscription</a>
+{% else %}
+    <a href="{% url 'sondage:logout' %}">déconnexion</a>
+    <a href="{% url 'sondage:profil' %}">profil</a>
+{% endif %}
+<!-- {% for proto in allProtos %}
+<p>{{ proto }}</p>
+{% endfor %} -->
+<p>{{ packet.src }}</p>
+{% endblock %}
+</body>
+</html>
